@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/konrad/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/home/konrad/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/konrad/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -149,11 +154,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/konrad/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/home/konrad/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/fatih/vim-go"
   }
 }
 
