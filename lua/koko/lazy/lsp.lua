@@ -39,28 +39,29 @@ return {
             cmp_lsp.default_capabilities())
         local lspconfig = require("lspconfig")
         local configs = require("lspconfig.configs")
+        lspconfig.gdscript.setup(capabilities)
 
       -- Register custom server
-        if not configs.kotlin_ls then
-            configs.kotlin_ls = {
-                default_config = {
-                    cmd = { 'kotlin-ls', '--stdio' },
-                    filetypes = { 'kotlin' },
-                    root_dir = lspconfig.util.root_pattern("build.gradle", "build.gradle.kts", "settings.gradle", ".git"),
-                    single_file_support = true,
-                    init_options = {
-                        storagePath = "/tmp/kotlin-ls",
-                        disableProgressBars = true,
-                        debugLog = false
-                    },
-                }
-            }
-        end
+        --if not configs.kotlin_ls then
+        --    configs.kotlin_ls = {
+        --        default_config = {
+        --            cmd = { 'kotlin-ls', '--stdio' },
+        --            filetypes = { 'kotlin' },
+        --            root_dir = lspconfig.util.root_pattern("build.gradle", "build.gradle.kts", "settings.gradle", ".git"),
+        --            single_file_support = true,
+        --            init_options = {
+        --                storagePath = "/tmp/kotlin-ls",
+        --                disableProgressBars = true,
+        --                debugLog = false
+        --            },
+        --        }
+        --    }
+        --end
 
         -- Setup with additional settings
-        lspconfig.kotlin_ls.setup({
-            capabilities = capabilities
-        })
+       -- lspconfig.kotlin_ls.setup({
+       --     capabilities = capabilities
+       -- })
 
         require("fidget").setup({})
         require("mason").setup()

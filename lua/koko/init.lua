@@ -58,6 +58,12 @@ autocmd('LspAttach', {
     end
 })
 
+local projectfile = vim.fn.getcwd() .. '/project.godot'
+if projectfile then
+    vim.fn.serverstart './godothost'
+end
+
+
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
